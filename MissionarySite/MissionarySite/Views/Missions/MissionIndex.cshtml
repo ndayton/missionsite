@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "MissionIndex";
+}
+  
+    <div class="container">
+        <br />
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                Choose a Mission
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="@Url.Action("Mission", "Missions", new { missionName = "Virginia Chesapeake" }, null)">Virginia Chesapeake</a></li>
+                <li><a href="@Url.Action("Mission", "Missions", new { missionName = "Ghana Cape Coast" }, null)">Ghana Cape Coast</a></li>
+                <li><a href="@Url.Action("Mission", "Missions", new { missionName = "Jamaica Kingston" }, null)">Jamaica Kingston</a></li>
+            </ul>
+        </div>
+        
+    </div>
+
+
+

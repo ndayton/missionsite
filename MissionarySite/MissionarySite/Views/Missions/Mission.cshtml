@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "Mission";
+}
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li><a href="@Url.Action("MissionIndex", "Missions")">Missions</a></li>
+    <li class="active">@ViewBag.Name</li>
+</ol>
+
+<div class="row">
+    <h2 class="centered">@ViewBag.Name Mission</h2>
+</div>
+<br />
+<br />
+<div class="row">
+    <div class="col-xs-6">
+        <p class="centered">
+            Mission President: @ViewBag.President
+            <br />Address: @ViewBag.Address
+            <br />Language: @ViewBag.Language
+            <br />Climate: @ViewBag.Climate
+            <br />Dominant Religion: @ViewBag.Religion
+        </p>
+    </div>
+    <div class="col-xs-6">
+        <p class="centered"><img src="@ViewBag.Picture" alt="Mission logo/flag" height="200" /></p>
+
+    </div>
+</div>
+<div class="row">
+    <p class="centered"><a href="@Url.Action("Directions", "Missions", new { missionName = @ViewBag.Name}, null)">Directions to Mission</a></p>
+</div>
+<hr />
+<div class="row">
+    <h2 class="centered">FAQ's</h2>
+    <p>Q: What helped you prepare for a mission?
+    <br />A: Going with the missionaries to visit people. <button class="btn-info" onclick="doFunction()">Reply</button></p>
+    <p>Q: What did you study before your mission?
+    <br />A: Preach My Gospel and the Book of Mormon. <button class="btn-info">Reply</button></p>
+    <p>Q: What helped you deal with the stress of a mission?
+    <br />A: Do things now that stretch your comfort zone. <button class="btn-info">Reply</button></p>
+    
+    <p>Have Another Question?</p>
+
+    <form>
+        <table border="0" cellspacing="0" cellpadding="4">
+            <tr>
+                <td>
+                    <div align="right">
+                        <b>Question:</b>
+                    </div>
+                </td>
+                <td colspan="6" style="width:100%">
+                    <textarea style="width:600px" name="message" cols="700" wrap="hard" rows="6"></textarea>
+                </td>
+            </tr>
+            
+            <tr>
+                <td width="30%">
+                    <div align="right">
+                        <b>Name:</b>
+                    </div>
+                </td>
+                <td width="40%">
+                    <input type="text" name="name" size="30">
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" name="submit" value="Submit">
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
