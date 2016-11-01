@@ -31,11 +31,18 @@ textarea {
     text-align: center;
 }
 
-div {
-    background-color: #bdffe9;
-}
-
 .jumbotron {
     background-color: #2280ff;
 }
 
+.coolcolor {
+    background-color: #2280ff!important;
+}
+
+.forward {
+    z-index:5;
+}
+
+.container {
+    background-color: #d2dd1b;
+}
